@@ -1,0 +1,1541 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaki Fadhlan Adani Abdurrahman, S.M. - Portofolio Eksekutif & HR Hub</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            50: '#f0f4f8',
+                            100: '#d9e2ec',
+                            800: '#0f172a',
+                            900: '#0b1329',
+                            950: '#060a17'
+                        },
+                        gold: {
+                            100: '#fef3c7',
+                            300: '#fcd34d',
+                            400: '#f59e0b',
+                            500: '#d4af37',
+                            600: '#b8860b',
+                            700: '#8b6508'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #d4af37 0%, #b8860b 50%, #e6c256 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-border-glow {
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+        }
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 30px -5px rgba(11, 19, 41, 0.12), 0 8px 12px -6px rgba(212, 175, 55, 0.2);
+        }
+        .badge-pulse {
+            animation: pulse-ring 2s infinite;
+        }
+        @keyframes pulse-ring {
+            0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); }
+            70% { box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-gold-500 selection:text-white">
+
+    <!-- HR Quick Banner -->
+    <div class="bg-navy-950 text-slate-200 text-xs py-2 px-4 border-b border-gold-500/30">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
+            <div class="flex items-center space-x-2">
+                <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 badge-pulse"></span>
+                <span class="font-semibold text-gold-400">Siap Bergabung Segera:</span>
+                <span class="text-slate-300">Terbuka untuk posisi Auditing, Risk Management, Compliance, Credit Analyst & ODP Banking</span>
+            </div>
+            <div class="flex items-center space-x-3 text-[11px]">
+                <a href="#contact" class="text-gold-400 hover:underline font-bold"><i class="fa-solid fa-paper-plane me-1"></i>Undang Wawancara</a>
+                <span class="text-slate-600">|</span>
+                <button onclick="copyHRProfile()" class="text-slate-300 hover:text-white"><i class="fa-regular fa-copy me-1"></i>Salin Info HR</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sticky Navigation -->
+    <nav id="navbar" class="sticky top-0 left-0 w-full z-40 transition-all duration-300 bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Brand Logo with Profile Photo -->
+                <a href="#hero" class="flex items-center space-x-3 group">
+                    <div class="w-11 h-11 rounded-xl bg-navy-900 flex items-center justify-center text-gold-400 font-bold text-xl shadow-md border border-gold-500/30 group-hover:scale-105 transition-transform overflow-hidden shrink-0">
+                        <img src="df790401-e9c2-416d-8641-71034b5b2ae1.jpg" alt="Zaki Fadhlan Adani, S.M." class="w-full h-full object-cover object-top" onerror="handleExecutiveImgError(this, 'Zaki')">
+                    </div>
+                    <div>
+                        <span class="text-lg font-extrabold text-navy-900 tracking-tight block leading-none">Zaki Fadhlan Adani, S.M.</span>
+                        <span class="text-[11px] text-gold-600 font-semibold tracking-wider">MANAGEMENT & AUDIT SPECIALIST</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav Links -->
+                <div class="hidden lg:flex items-center space-x-7 text-xs font-bold uppercase tracking-wider text-slate-600">
+                    <a href="#hr-summary" class="hover:text-navy-900 transition-colors">HR Summary</a>
+                    <a href="#about" class="hover:text-navy-900 transition-colors">Tentang</a>
+                    <a href="#experience" class="hover:text-navy-900 transition-colors">Pengalaman</a>
+                    <a href="#certifications" class="hover:text-navy-900 transition-colors">Sertifikasi & Verifikasi</a>
+                    <a href="#skills" class="hover:text-navy-900 transition-colors">Matriks Keahlian</a>
+                    <a href="#contact" class="hover:text-navy-900 transition-colors">Kontak</a>
+                </div>
+
+                <!-- HR Action Buttons -->
+                <div class="hidden md:flex items-center space-x-3">
+                    <a href="#contact" class="inline-flex items-center justify-center px-4 py-2.5 rounded-lg text-xs font-bold bg-navy-900 text-gold-400 hover:bg-navy-800 transition-all shadow-md border border-gold-500/30">
+                        <i class="fa-solid fa-calendar-check me-2"></i>Jadwalkan Interview
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" type="button" class="text-slate-700 hover:text-navy-900 focus:outline-none p-2 rounded-lg" aria-label="Toggle navigation">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3 shadow-xl">
+            <a href="#hr-summary" class="block px-3 py-2 rounded-md text-sm font-semibold text-slate-700 hover:bg-slate-100">HR Summary</a>
+            <a href="#about" class="block px-3 py-2 rounded-md text-sm font-semibold text-slate-700 hover:bg-slate-100">Tentang Saya</a>
+            <a href="#experience" class="block px-3 py-2 rounded-md text-sm font-semibold text-slate-700 hover:bg-slate-100">Pengalaman Kerja</a>
+            <a href="#certifications" class="block px-3 py-2 rounded-md text-sm font-semibold text-slate-700 hover:bg-slate-100">Sertifikasi Terverifikasi</a>
+            <a href="#skills" class="block px-3 py-2 rounded-md text-sm font-semibold text-slate-700 hover:bg-slate-100">Keahlian & Tools</a>
+            <a href="#contact" class="block px-3 py-2 rounded-md text-sm font-semibold text-slate-700 hover:bg-slate-100">Hubungi Langsung</a>
+            <a href="#contact" class="block text-center px-4 py-2.5 rounded-lg text-xs font-bold bg-navy-900 text-gold-400">
+                Jadwalkan Wawancara HR
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="pt-12 pb-16 md:pt-20 md:pb-24 overflow-hidden bg-gradient-to-b from-slate-100 via-white to-slate-50 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                
+                <!-- Left Content Column -->
+                <div class="lg:col-span-7 text-center lg:text-left">
+                    
+                    <!-- Candidate Status Badges -->
+                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2 mb-5">
+                        <span class="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold border border-emerald-300">
+                            <i class="fa-solid fa-circle-check text-emerald-600"></i>
+                            <span>Siap Bekerja Segera</span>
+                        </span>
+                        <span class="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-gold-100 text-navy-900 text-xs font-bold border border-gold-300">
+                            <i class="fa-solid fa-award text-gold-600"></i>
+                            <span>S1 Manajemen UNS | Cum Laude (IPK 3.74)</span>
+                        </span>
+                    </div>
+
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-navy-900 tracking-tight leading-tight mb-4">
+                        Zaki Fadhlan Adani Abdurrahman, S.M.
+                    </h1>
+
+                    <p class="text-lg md:text-xl font-bold gold-gradient-text mb-4">
+                        Spesialis Internal Audit (ISO 27001 Lead Auditor), Certified Tax Technician (CTT) & Perbankan
+                    </p>
+
+                    <p class="text-sm sm:text-base text-slate-600 mb-6 font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        Lulusan Manajemen FEB Universitas Sebelas Maret dengan rekam jejak magang operasional teruji di <strong class="text-navy-900">BTN, BRI (Dua Unit/Cabang), KPP Pratama DJP, dan Rumah BUMN Solo</strong>. Menguasai verifikasi berkas kredit, audit kepatuhan, analisis transaksi keuangan MS Excel & SPSS, serta manajemen risiko berstandar nasional & internasional.
+                    </p>
+
+                    <!-- Target Roles Badges for HR -->
+                    <div class="mb-8 p-4 rounded-xl bg-white border border-slate-200 shadow-sm text-left">
+                        <p class="text-xs font-extrabold uppercase text-slate-400 tracking-wider mb-2"><i class="fa-solid fa-bullseye me-1 text-gold-600"></i> Target Posisi Ideal:</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2.5 py-1 rounded-md bg-navy-900 text-gold-300 text-xs font-semibold">Internal Auditor / Compliance Officer</span>
+                            <span class="px-2.5 py-1 rounded-md bg-navy-900 text-gold-300 text-xs font-semibold">Risk Management Specialist</span>
+                            <span class="px-2.5 py-1 rounded-md bg-navy-900 text-gold-300 text-xs font-semibold">Credit Analyst / Consumer Loan Officer</span>
+                            <span class="px-2.5 py-1 rounded-md bg-navy-900 text-gold-300 text-xs font-semibold">Management Trainee / ODP Perbankan</span>
+                            <span class="px-2.5 py-1 rounded-md bg-navy-900 text-gold-300 text-xs font-semibold">Tax Specialist (CTT) & Financial Analyst</span>
+                        </div>
+                    </div>
+
+                    <!-- CTA Actions for HR -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3">
+                        <a href="https://wa.me/62895408034646?text=Halo%20Zaki,%20kami%20tertarik%20dengan%20profil%20Anda%20dan%20ingin%20mengundang%20diskusi%20karir." target="_blank" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-emerald-600 text-white font-bold text-xs hover:bg-emerald-700 transition-all shadow-md flex items-center justify-center space-x-2">
+                            <i class="fa-brands fa-whatsapp text-base"></i>
+                            <span>Undang via WhatsApp</span>
+                        </a>
+                        <a href="mailto:zakifadhlan@gmail.com?subject=Undangan%20Wawancara%20/%20Diskusi%20Karir%20-%20[Nama%20Perusahaan]" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-navy-900 text-gold-400 font-bold text-xs hover:bg-navy-800 transition-all shadow-md border border-gold-500/30 flex items-center justify-center space-x-2">
+                            <i class="fa-regular fa-envelope text-base"></i>
+                            <span>Kirim Undangan Email</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column: Formal Full-Body Photo & Card -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-md">
+                        <div class="relative bg-white rounded-2xl p-5 border border-slate-200 shadow-xl gold-border-glow">
+                            <!-- Executive Full-Body Photo Showcase -->
+                            <div class="relative mb-5 rounded-xl overflow-hidden bg-slate-900 border border-slate-200 group">
+                                <img id="hero-profile-img" src="df790401-e9c2-416d-8641-71034b5b2ae1.jpg" alt="Zaki Fadhlan Adani Abdurrahman, S.M. - Formal Executive Portrait" class="w-full h-80 object-cover object-top group-hover:scale-105 transition-transform duration-500 cursor-pointer" onclick="openPhotoModal(this.src, 'Foto Formal Eksekutif - Zaki Fadhlan Adani Abdurrahman, S.M.')" onerror="handleExecutiveImgError(this, 'Zaki Fadhlan Adani, S.M.')">
+                                
+                                <div class="absolute top-3 right-3 bg-navy-950/80 backdrop-blur-md px-3 py-1 rounded-full border border-gold-500/40 text-[10px] font-bold text-gold-400 flex items-center gap-1.5 shadow-md">
+                                    <span class="w-2 h-2 rounded-full bg-emerald-400 badge-pulse"></span>
+                                    <span>Verified Candidate</span>
+                                </div>
+
+                                <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-navy-950 via-navy-950/70 to-transparent p-4 text-white">
+                                    <p class="text-sm font-extrabold text-white">Zaki Fadhlan Adani A., S.M.</p>
+                                    <p class="text-[11px] text-gold-400 font-semibold">S1 Manajemen UNS • IPK 3.74 (Cum Laude)</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center justify-between pb-3 border-b border-slate-100 mb-4">
+                                <div>
+                                    <p class="text-xs font-bold text-emerald-600 flex items-center gap-1">
+                                        <i class="fa-solid fa-circle-check"></i> Siap Bergabung Immediately
+                                    </p>
+                                    <p class="text-xs text-slate-500 mt-0.5"><i class="fa-solid fa-location-dot me-1 text-gold-600"></i> Cimahi, Jawa Barat (Siap Relokasi)</p>
+                                </div>
+                                <button onclick="openPhotoModal(document.getElementById('hero-profile-img').src, 'Foto Formal Eksekutif - Zaki Fadhlan Adani')" class="text-[11px] font-bold text-navy-900 bg-navy-50 hover:bg-navy-100 px-3 py-1.5 rounded-lg border border-slate-200 transition-all flex items-center gap-1">
+                                    <i class="fa-solid fa-expand text-gold-600"></i> Full View
+                                </button>
+                            </div>
+
+                            <!-- HR Highlights List -->
+                            <div class="space-y-2.5 text-xs mb-5">
+                                <div class="flex justify-between items-center p-2.5 rounded-lg bg-slate-50 border border-slate-100">
+                                    <span class="text-slate-500 font-medium"><i class="fa-solid fa-graduation-cap text-gold-600 me-2"></i>Pendidikan</span>
+                                    <span class="font-extrabold text-navy-900">S1 Manajemen UNS (3.74)</span>
+                                </div>
+                                <div class="flex justify-between items-center p-2.5 rounded-lg bg-slate-50 border border-slate-100">
+                                    <span class="text-slate-500 font-medium"><i class="fa-solid fa-shield-halved text-gold-600 me-2"></i>Lead Auditor ISO 27001</span>
+                                    <span class="font-extrabold text-navy-900">Score 95/100 (#026LAISMS18)</span>
+                                </div>
+                                <div class="flex justify-between items-center p-2.5 rounded-lg bg-slate-50 border border-slate-100">
+                                    <span class="text-slate-500 font-medium"><i class="fa-solid fa-receipt text-gold-600 me-2"></i>Teknisi Pajak CTT ATPI</span>
+                                    <span class="font-extrabold text-navy-900">Certified Tax Technician (Brevet A/B)</span>
+                                </div>
+                                <div class="flex justify-between items-center p-2.5 rounded-lg bg-slate-50 border border-slate-100">
+                                    <span class="text-slate-500 font-medium"><i class="fa-solid fa-building-columns text-gold-600 me-2"></i>Pengalaman Kerja</span>
+                                    <span class="font-extrabold text-navy-900">BTN, BRI, DJP, Rumah BUMN</span>
+                                </div>
+                            </div>
+
+                            <!-- Quick Stats Grid -->
+                            <div class="grid grid-cols-3 gap-2 text-center pt-2 border-t border-slate-100">
+                                <div class="p-2 rounded-lg bg-navy-50">
+                                    <p class="text-base font-black text-navy-900">3.74</p>
+                                    <p class="text-[9px] font-bold text-slate-500 uppercase">IPK Cum Laude</p>
+                                </div>
+                                <div class="p-2 rounded-lg bg-navy-50">
+                                    <p class="text-base font-black text-navy-900">95/100</p>
+                                    <p class="text-[9px] font-bold text-slate-500 uppercase">Skor ISO Auditor</p>
+                                </div>
+                                <div class="p-2 rounded-lg bg-navy-50">
+                                    <p class="text-base font-black text-navy-900">5+</p>
+                                    <p class="text-[9px] font-bold text-slate-500 uppercase">Instansi Terkemuka</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- HR Summary Section -->
+    <section id="hr-summary" class="py-16 bg-navy-900 text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-xs font-extrabold uppercase tracking-widest text-gold-400 bg-gold-500/10 px-3 py-1 rounded-full border border-gold-500/30">Ringkasan Evaluasi Rekrutmen</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-3">Mengapa Zaki Adalah Kandidat Tepat untuk Perusahaan Anda?</h2>
+                <p class="text-xs sm:text-sm text-slate-300 mt-2">Empat pilar nilai utama yang menjamin adaptasi cepat, ketelitian tinggi, dan kontribusi nyata sejak hari pertama.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Pillar 1 -->
+                <div class="bg-navy-950/80 p-6 rounded-2xl border border-gold-500/30 shadow-lg relative">
+                    <div class="w-12 h-12 rounded-xl bg-gold-500/20 text-gold-400 flex items-center justify-center text-xl font-bold mb-4 border border-gold-500/40">
+                        <i class="fa-solid fa-shield-cat"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-white mb-2">1. Pemahaman Audit & Risiko Terstandar</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Memegang sertifikasi resmi <strong class="text-gold-300">ISO/IEC 27001 Lead Auditor (Skor: 95/100, Cert #026LAISMS18)</strong> dan <strong class="text-gold-300">Sertifikasi Manajemen Risiko Perbankan BNSP</strong>. Paham kerangka tata kelola, mitigasi risiko operasional, dan kepatuhan SOP.
+                    </p>
+                </div>
+
+                <!-- Pillar 2 -->
+                <div class="bg-navy-950/80 p-6 rounded-2xl border border-gold-500/30 shadow-lg relative">
+                    <div class="w-12 h-12 rounded-xl bg-gold-500/20 text-gold-400 flex items-center justify-center text-xl font-bold mb-4 border border-gold-500/40">
+                        <i class="fa-solid fa-building-columns"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-white mb-2">2. Pengalaman Praktis Perbankan & Pajak</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Telah bekerja langsung dalam administrasi kredit perumahan (BTN KCP Cimahi), operasional & pencairan kredit KUR (BRI Unit Nusukan & KC Slamet Riyadi - Predikat Sangat Baik), serta analisis rekening audit pajak (KPP Pratama DJP).
+                    </p>
+                </div>
+
+                <!-- Pillar 3 -->
+                <div class="bg-navy-950/80 p-6 rounded-2xl border border-gold-500/30 shadow-lg relative">
+                    <div class="w-12 h-12 rounded-xl bg-gold-500/20 text-gold-400 flex items-center justify-center text-xl font-bold mb-4 border border-gold-500/40">
+                        <i class="fa-solid fa-file-excel"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-white mb-2">3. Ketelitian Data Excel & Analytics</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Mahir mengolah data kuantitatif menggunakan <strong class="text-gold-300">Microsoft Excel Advanced</strong>, SPSS, serta sistem operasional perbankan (Ecosystem 197). Terbiasa memverifikasi puluhan dokumen dengan akurasi 100%.
+                    </p>
+                </div>
+
+                <!-- Pillar 4 -->
+                <div class="bg-navy-950/80 p-6 rounded-2xl border border-gold-500/30 shadow-lg relative">
+                    <div class="w-12 h-12 rounded-xl bg-gold-500/20 text-gold-400 flex items-center justify-center text-xl font-bold mb-4 border border-gold-500/40">
+                        <i class="fa-solid fa-users-gear"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-white mb-2">4. Kepemimpinan Organisasi & Prestasi</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Mantan <strong class="text-gold-300">Menko Sospol BEM FEB UNS</strong> dan penerima hibah pengabdian Kemendikbudristek (PPK Ormawa SK #7421/E2/DT.01.01/2024). Memiliki keterampilan komunikasi eksekutif, koordinasi tim, dan penyusunan laporan.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-20 bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="text-xs font-bold uppercase tracking-widest text-gold-600">Latar Belakang Akademis & Profil</span>
+                <h2 class="text-3xl font-extrabold text-navy-900 mt-1">Tentang Saya</h2>
+                <div class="w-16 h-1 bg-gold-500 mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
+                
+                <!-- Detailed Bio -->
+                <div class="lg:col-span-7 bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-200 flex flex-col justify-between shadow-sm">
+                    <div>
+                        <h3 class="text-lg font-bold text-navy-900 mb-4 flex items-center gap-2">
+                            <i class="fa-solid fa-user-check text-gold-600"></i> Ringkasan Profesional Eksekutif
+                        </h3>
+                        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
+                            Lulusan Sarjana Manajemen (S.M.) dari Fakultas Ekonomi dan Bisnis, Universitas Sebelas Maret (UNS) dengan Indeks Prestasi Kumulatif <strong class="text-navy-900">3.74 / 4.00 (Predikat Cum Laude)</strong>. Berfokus pada Manajemen Risiko, Internal Audit, Kepatuhan Regulasi, dan Administrasi Kredit Perbankan.
+                        </p>
+                        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-6">
+                            Memiliki kombinasi pengetahuan akademis unggul dan pengalaman lapangan nyata di sektor perbankan terkemuka (BTN & BRI) serta instansi pemerintah (DJP KPP Pratama Cibeunying). Didukung lisensi profesi resmi seperti <strong class="text-navy-900">Lead Auditor ISO/IEC 27001 (Pass 95/100)</strong>, <strong class="text-navy-900">Certified Tax Technician (CTT) ATPI & Brevet Pajak A/B (Transkrip A)</strong>, dan <strong class="text-navy-900">Sertifikasi Risiko Bank BNSP</strong>.
+                        </p>
+                    </div>
+
+                    <div class="pt-4 border-t border-slate-200 grid grid-cols-2 gap-4 text-xs">
+                        <div>
+                            <p class="text-slate-400 font-semibold uppercase text-[10px]">Domisili Utama</p>
+                            <p class="font-bold text-navy-900 mt-0.5">Cimahi, Jawa Barat</p>
+                        </div>
+                        <div>
+                            <p class="text-slate-400 font-semibold uppercase text-[10px]">Ketersediaan Relokasi</p>
+                            <p class="font-bold text-emerald-600 mt-0.5"><i class="fa-solid fa-check me-1"></i>Siap Relokasi Seluruh Indonesia</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education Card -->
+                <div class="lg:col-span-5 bg-navy-900 text-white p-6 sm:p-8 rounded-2xl shadow-xl flex flex-col justify-between border border-gold-500/30">
+                    <div>
+                        <h3 class="text-base font-bold text-gold-400 mb-6 flex items-center gap-2">
+                            <i class="fa-solid fa-graduation-cap"></i> Riwayat Pendidikan Formal
+                        </h3>
+
+                        <div class="space-y-6">
+                            <!-- College -->
+                            <div class="relative pl-6 border-l-2 border-gold-500">
+                                <div class="absolute -left-[7px] top-0 w-3 h-3 rounded-full bg-gold-500"></div>
+                                <span class="text-[11px] text-gold-300 font-semibold">Agustus 2022 - Juni 2026</span>
+                                <h4 class="text-base font-bold text-white mt-0.5">UNIVERSITAS SEBELAS MARET (UNS)</h4>
+                                <p class="text-xs text-slate-300 font-medium">S1 Manajemen | FEB UNS</p>
+                                <div class="mt-2 inline-flex items-center space-x-2 px-2.5 py-1 rounded bg-gold-500/20 text-gold-300 text-xs font-bold border border-gold-500/40">
+                                    <span>IPK: 3.74 / 4.00</span>
+                                    <span>•</span>
+                                    <span>Cum Laude</span>
+                                </div>
+                            </div>
+
+                            <!-- High School -->
+                            <div class="relative pl-6 border-l-2 border-slate-700">
+                                <div class="absolute -left-[7px] top-0 w-3 h-3 rounded-full bg-slate-600"></div>
+                                <span class="text-[11px] text-slate-400 font-semibold">Juli 2019 - Mei 2022</span>
+                                <h4 class="text-sm font-bold text-slate-200 mt-0.5">SMA NEGERI 9 BANDUNG</h4>
+                                <p class="text-xs text-slate-400">Jurusan MIPA | Nilai Akhir: 88.23 / 100.00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-slate-800 text-[11px] text-slate-400 flex items-center justify-between">
+                        <span>Fokus Studi: Audit, Risk, Taxation & Credit</span>
+                        <i class="fa-solid fa-certificate text-gold-400"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience & Projects Section -->
+    <section id="experience" class="py-20 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-10">
+                <span class="text-xs font-bold uppercase tracking-widest text-gold-600">Rekam Jejak Magang & Kontribusi</span>
+                <h2 class="text-3xl font-extrabold text-navy-900 mt-1">Pengalaman Kerja & Organisasi</h2>
+                <p class="text-xs sm:text-sm text-slate-500 mt-2">Filter pengalaman sesuai kebutuhan posisi rekrutmen Anda:</p>
+                <div class="w-16 h-1 bg-gold-500 mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <!-- Filter Buttons for HR -->
+            <div class="flex flex-wrap items-center justify-center gap-2 mb-10">
+                <button onclick="filterExperience('all')" id="btn-exp-all" class="exp-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-navy-900 text-gold-400 border border-gold-500/30 transition-all shadow-sm">
+                    Semua Pengalaman (6)
+                </button>
+                <button onclick="filterExperience('banking')" id="btn-exp-banking" class="exp-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-white text-slate-600 border border-slate-200 hover:bg-slate-100 transition-all">
+                    Perbankan & Kredit (3)
+                </button>
+                <button onclick="filterExperience('tax')" id="btn-exp-tax" class="exp-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-white text-slate-600 border border-slate-200 hover:bg-slate-100 transition-all">
+                    Perpajakan & Audit (1)
+                </button>
+                <button onclick="filterExperience('org')" id="btn-exp-org" class="exp-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-white text-slate-600 border border-slate-200 hover:bg-slate-100 transition-all">
+                    UMKM & Kepemimpinan (2)
+                </button>
+            </div>
+
+            <!-- Experience Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- BTN Card with Real On-Site Photo -->
+                <div class="exp-card exp-banking bg-white rounded-2xl p-6 border border-slate-200 shadow-sm card-hover flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="px-2.5 py-1 rounded-md text-[11px] font-bold bg-navy-900 text-gold-400">Agt 2026 - Present</span>
+                            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-blue-100 text-blue-800">Banking / Credit</span>
+                        </div>
+
+                        <!-- Real On-Site Photo at Bank BTN -->
+                        <div class="relative mb-4 rounded-xl overflow-hidden bg-slate-100 border border-slate-200 group cursor-pointer" onclick="openPhotoModal('WhatsApp Image 2026-08-18 at 18.16.17 (1).jpeg', 'Dokumentasi On-Site Intern Divisi Kredit - Bank BTN KCP Cimahi')">
+                            <img src="WhatsApp Image 2026-08-18 at 18.16.17 (1).jpeg" alt="Zaki Fadhlan Adani at Bank BTN" class="w-full h-44 object-cover object-center group-hover:scale-105 transition-transform duration-300" onerror="handleImgError(this, 'Dokumentasi Bank BTN Cimahi')">
+                            <div class="absolute inset-0 bg-navy-950/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-bold gap-1.5">
+                                <i class="fa-solid fa-magnifying-glass-plus text-gold-400 text-sm"></i> Lihat Dokumentasi BTN
+                            </div>
+                            <div class="absolute bottom-2 left-2 bg-navy-950/80 backdrop-blur-md px-2.5 py-0.5 rounded text-[10px] font-bold text-gold-300">
+                                <i class="fa-solid fa-camera me-1"></i> On-Site Bank BTN
+                            </div>
+                        </div>
+
+                        <h3 class="text-base font-bold text-navy-900">Business Support Intern</h3>
+                        <p class="text-xs font-bold text-gold-600 mb-0.5">Bank Tabungan Negara (Persero) Tbk</p>
+                        <p class="text-[11px] text-slate-400 mb-4"><i class="fa-solid fa-location-dot me-1"></i>Divisi Kredit KCP Cimahi</p>
+
+                        <ul class="space-y-2 text-xs text-slate-600 mb-6">
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-circle-check text-gold-600 text-xs mt-0.5 shrink-0"></i>
+                                <span>Mendukung Relationship Manager (RM) dalam kegiatan lapangan proyek perumahan subsidi produk kredit konsumen.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-circle-check text-gold-600 text-xs mt-0.5 shrink-0"></i>
+                                <span>Membantu Consumer Loan Unit (CLU) mengorganisir dan menyiapkan kelengkapan berkas pemohon kredit.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-circle-check text-gold-600 text-xs mt-0.5 shrink-0"></i>
+                                <span>Mengolah dan meng-update data perkreditan harian menggunakan Microsoft Excel untuk pelaporan bisnis unit.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pt-4 border-t border-slate-100 flex flex-wrap gap-1.5">
+                        <span class="px-2 py-1 rounded bg-slate-100 text-navy-900 text-[10px] font-semibold">Kredit Konsumer</span>
+                        <span class="px-2 py-1 rounded bg-slate-100 text-navy-900 text-[10px] font-semibold">Excel Data Report</span>
+                    </div>
+                </div>
+
+                <!-- DJP KPP Pratama Card -->
+                <div class="exp-card exp-tax bg-white rounded-2xl p-6 border border-slate-200 shadow-sm card-hover flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="px-2.5 py-1 rounded-md text-[11px] font-bold bg-slate-200 text-slate-800">Juni 2025 - Agt 2025</span>
+                            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-purple-100 text-purple-800">Tax Audit</span>
+                        </div>
+
+                        <!-- Real On-Site Photo at DJP -->
+                        <div class="relative mb-4 rounded-xl overflow-hidden bg-slate-100 border border-slate-200 group cursor-pointer" onclick="openPhotoModal('WhatsApp Image 2026-07-26 at 22.16.17.jpeg', 'Dokumentasi On-Site Intern DJP KPP Pratama Bandung Cibeunying')">
+                            <img src="WhatsApp Image 2026-07-26 at 22.16.17.jpeg" alt="Zaki Fadhlan Adani at DJP KPP Pratama Bandung Cibeunying" class="w-full h-44 object-cover object-center group-hover:scale-105 transition-transform duration-300" onerror="handleImgError(this, 'Dokumentasi DJP Cibeunying')">
+                            <div class="absolute inset-0 bg-navy-950/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-bold gap-1.5">
+                                <i class="fa-solid fa-magnifying-glass-plus text-gold-400 text-sm"></i> Lihat Dokumentasi DJP
+                            </div>
+                            <div class="absolute bottom-2 left-2 bg-navy-950/80 backdrop-blur-md px-2.5 py-0.5 rounded text-[10px] font-bold text-gold-300">
+                                <i class="fa-solid fa-camera me-1"></i> On-Site KPP Pratama
+                            </div>
+                        </div>
+
+                        <h3 class="text-base font-bold text-navy-900">Tax Audit & Collection Intern</h3>
+                        <p class="text-xs font-bold text-gold-600 mb-0.5">DJP - KPP Pratama Bandung Cibeunying</p>
+                        <p class="text-[11px] text-slate-400 mb-2"><i class="fa-solid fa-location-dot me-1"></i>Subseksi Pemeriksaan & Penagihan | Kanwil DJP Jawa Barat I (Cert #SKT-1870/SJ.51/2025)</p>
+                        <div class="flex flex-wrap gap-1.5 mb-4">
+                            <button onclick="event.stopPropagation(); openPhotoModal('cert-magang-djp-jabar1.jpg', 'Sertifikat Magang Resmi Kementerian Keuangan RI - Kanwil DJP Jawa Barat I')" class="px-2 py-1 rounded-lg bg-navy-50 hover:bg-navy-100 text-navy-900 text-[10px] font-bold border border-slate-200 transition-all flex items-center gap-1">
+                                <i class="fa-solid fa-certificate text-gold-600"></i> Sertifikat Resmi Kemenkeu
+                            </button>
+                            <button onclick="event.stopPropagation(); openPhotoModal('foto-tim-djp-jabar1.jpg', 'Foto Bersama Tim & Kepala Kanwil DJP Jawa Barat I')" class="px-2 py-1 rounded-lg bg-navy-50 hover:bg-navy-100 text-navy-900 text-[10px] font-bold border border-slate-200 transition-all flex items-center gap-1">
+                                <i class="fa-solid fa-camera text-gold-600"></i> Foto Bersama Kakanwil
+                            </button>
+                        </div>
+
+                        <ul class="space-y-2 text-xs text-slate-600 mb-6">
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-circle-check text-gold-600 text-xs mt-0.5 shrink-0"></i>
+                                <span>Memverifikasi laporan rekening bank Wajib Pajak menggunakan MS Excel secara presisi untuk pemrosesan tim audit.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-circle-check text-gold-600 text-xs mt-0.5 shrink-0"></i>
+                                <span>Mengelola administrasi lebih dari 30 Surat Tagihan Pajak (STP) sesuai Prosedur Operasional Standar (SOP).</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-circle-check text-gold-600 text-xs mt-0.5 shrink-0"></i>
+                                <span>Menganalisis alur transaksi keuangan Wajib Pajak guna identifikasi potensi ketidakpatuhan.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pt-4 border-t border-slate-100 flex flex-wrap gap-1.5">
+                        <span class="px-2 py-1 rounded bg-slate-100 text-navy-900 text-[10px] font-semibold">Audit Pajak</span>
+                        <span class="px-2 py-1 rounded bg-slate-100 text-navy-900 text-[10px] font-semibold">30+ STP Managed</span>
+                    </div>
+                </div>
+
+                <!-- BRI Nusukan Unit Card -->
+                <div class="exp-card exp-banking bg-white rounded-2xl p-6 border border-slate-200 shadow-sm card-hover flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="px-2.5 py-1 rounded-md text-[11px] font-bold bg-slate-200 text-slate-800">Mei 2025</span>
+                            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-blue-100 text-blue-800">Predikat: Sangat Baik</span>
+                        </div>
+
+                        <!-- Real On-Site Photo at BRI Nusukan -->
+                        <div class="relative mb-4 rounded-xl overflow-hidden bg-slate-100 border border-slate-200 group cursor-pointer" onclick="openPhotoModal('WhatsApp Image 2026-07-26 at 22.12.39.jpeg', 'Dokumentasi Penutupan Magang - BRI Unit Nusukan Solo')">
+                            <img src="WhatsApp Image 2026-07-26 at 22.12.39.jpeg" alt="Zaki Fadhlan Adani at BRI Unit Nusukan Solo" class="w-full h-44 object-cover object-center group-hover:scale-105 transition-transform duration-300" onerror="handleImgError(this, 'Dokumentasi BRI Nusukan')">
+                            <div class="absolute inset-0 bg-navy-950/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-bold gap-1.5">
+                                <i class="fa-solid fa-magnifying-glass-plus text-gold-400 text-sm"></i> Lihat Dokumentasi BRI Nusukan
+                            </div>
+                            <div class="absolute bottom-2 left-2 bg-navy-950/80 backdrop-blur-md px-2.5 py-0.5 rounded text-[10px] font-bold text-gold-300">
+                                <i class="fa-solid fa-camera me-1"></i> On-Site BRI Nusukan
+                            </div>
+                        </div>
+
+                        <h3 class="text-base font-bold text-navy-900">Bank Operations Intern</h3>
+                        <p class="text-xs font-bold text-gold-600 mb-0.5">Bank Rakyat Indonesia (Persero) Tbk</p>
+                        <p class="text-[11px] text-slate-400 mb-2"><i class="fa-solid fa-location-dot me-1"></i>Unit Nusukan Solo (Cert #B.1624/KC-VII/SDM/05/2025)</p>
+                        <button onclick="event.stopPropagation(); openPhotoModal('cert-magang-bri-nusukan.jpg', 'Sertifikat Magang - BRI Unit Nusukan Solo')" class="mb-4 px-2 py-1 rounded-lg bg-navy-50 hover:bg-navy-100 text-navy-900 text-[10px] font-bold border border-slate-200 transition-all flex items-center gap-1">
+                            <i class="fa-solid fa-certificate text-gold-600"></i> Lihat Sertifikat Magang
+                        </button>
+
+                        <ul class="space-y-2 text-xs text-slate-600 mb-6">
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-circle-check text-gold-600 text-xs mt-0.5 shrink-0"></i>
+                                <span>Memproses aplikasi Kredit Usaha Rakyat (KUR) melalui platform Ecosystem 197 & data entry nasabah.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-circle-check text-gold-600 text-xs mt-0.5 shrink-0"></i>
+                                <span>Validasi berkas KUR (identitas, agunan, legalitas usaha) rata-rata 3-5 pengajuan per minggu.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-circle-check text-gold-600 text-xs mt-0.5 shrink-0"></i>
+                                <span>Mendukung operasional harian perbankan & pelayanan informasi nasabah secara langsung.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pt-4 border-t border-slate-100 flex flex-wrap gap-1.5">
+                        <span class="px-2 py-1 rounded bg-slate-100 text-navy-900 text-[10px] font-semibold">Platform Ecosystem 197</span>
+                        <span class="px-2 py-1 rounded bg-slate-100 text-navy-900 text-[10px] font-semibold">Validasi KUR</span>
+                    </div>
+                </div>
+
+                <!-- BRI Slamet Riyadi Card -->
+                <div class="exp-card exp-banking bg-white rounded-2xl p-6 border border-slate-200 shadow-sm card-hover flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="px-2.5 py-1 rounded-md text-[11px] font-bold bg-slate-200 text-slate-800">Jan 2025 - Feb 2025</span>
+                            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-blue-100 text-blue-800">Predikat: Sangat Baik</span>
+                        </div>
+
+                        <!-- Real On-Site Photo at BRI Slamet Riyadi -->
+                        <div class="relative mb-4 rounded-xl overflow-hidden bg-slate-100 border border-slate-200 group cursor-pointer" onclick="openPhotoModal('WhatsApp Image 2026-08-19 at 22.43.46.jpeg', 'Penerahan Sertifikat Magang Hasil Sangat Baik - BRI KC Solo Slamet Riyadi')">
+                            <img src="WhatsApp Image 2026-08-19 at 22.43.46.jpeg" alt="Zaki Fadhlan Adani at BRI KC Solo Slamet Riyadi" class="w-full h-44 object-cover object-center group-hover:scale-105 transition-transform duration-300" onerror="handleImgError(this, 'Dokumentasi BRI Slamet Riyadi')">
+                            <div class="absolute inset-0 bg-navy-950/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-bold gap-1.5">
+                                <i class="fa-solid fa-magnifying-glass-plus text-gold-400 text-sm"></i> Lihat Dokumentasi BRI Slamet Riyadi
+                            </div>
+                            <div class="absolute bottom-2 left-2 bg-navy-950/80 backdrop-blur-md px-2.5 py-0.5 rounded text-[10px] font-bold text-gold-300">
+                                <i class="fa-solid fa-camera me-1"></i> On-Site BRI Slamet Riyadi
+                            </div>
+                        </div>
+
+                        <h3 class="text-base font-bold text-navy-900">Credit Administration Intern</h3>
+                        <p class="text-xs font-bold text-gold-600 mb-0.5">BRI KC Solo Slamet Riyadi</p>
+                        <p class="text-[11px] text-slate-400 mb-2"><i class="fa-solid fa-location-dot me-1"></i>Kantor Cabang Solo (Cert #B.481/KC.VII/SDM/02/2025)</p>
+                        <button onclick="event.stopPropagation(); openPhotoModal('cert-magang-bri-slametriyadi.jpg', 'Sertifikat Magang - BRI KC Solo Slamet Riyadi')" class="mb-4 px-2 py-1 rounded-lg bg-navy-50 hover:bg-navy-100 text-navy-900 text-[10px] font-bold border border-slate-200 transition-all flex items-center gap-1">
+                            <i class="fa-solid fa-certificate text-gold-600"></i> Lihat Sertifikat Magang
+                        </button>
+
+                        <ul class="space-y-2 text-xs text-slate-600 mb-6">
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-circle-check text-gold-600 text-xs mt-0.5 shrink-0"></i>
+                                <span>Mengelola verifikasi berkas permohonan kredit, validasi data debitur, & pengarsipan legalitas.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-circle-check text-gold-600 text-xs mt-0.5 shrink-0"></i>
+                                <span>Membantu administrasi pencairan pinjaman, verifikasi rekening penerima, & koordinasi antar-unit.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-circle-check text-gold-600 text-xs mt-0.5 shrink-0"></i>
+                                <span>Mendukung hitung uang tunai fisik & penyiapan korespondensi resmi cabang.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pt-4 border-t border-slate-100 flex flex-wrap gap-1.5">
+                        <span class="px-2 py-1 rounded bg-slate-100 text-navy-900 text-[10px] font-semibold">Administrasi Kredit</span>
+                        <span class="px-2 py-1 rounded bg-slate-100 text-navy-900 text-[10px] font-semibold">Pencairan Pinjaman</span>
+                    </div>
+                </div>
+
+                <!-- Rumah BUMN Card -->
+                <div class="exp-card exp-org bg-white rounded-2xl p-6 border border-slate-200 shadow-sm card-hover flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="px-2.5 py-1 rounded-md text-[11px] font-bold bg-slate-200 text-slate-800">Feb 2025 - Juni 2025</span>
+                            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-100 text-emerald-800">MSME Relations</span>
+                        </div>
+
+                        <!-- Real On-Site Photo at Rumah BUMN Solo -->
+                        <div class="relative mb-4 rounded-xl overflow-hidden bg-slate-100 border border-slate-200 group cursor-pointer" onclick="openPhotoModal('WhatsApp Image 2026-07-26 at 22.20.56.jpeg', 'Dokumentasi Program Pendampingan UMKM - Rumah BUMN Solo')">
+                            <img src="WhatsApp Image 2026-07-26 at 22.20.56.jpeg" alt="Zaki Fadhlan Adani at Rumah BUMN Solo" class="w-full h-44 object-cover object-center group-hover:scale-105 transition-transform duration-300" onerror="handleImgError(this, 'Dokumentasi Rumah BUMN Solo')">
+                            <div class="absolute inset-0 bg-navy-950/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-bold gap-1.5">
+                                <i class="fa-solid fa-magnifying-glass-plus text-gold-400 text-sm"></i> Lihat Dokumentasi Rumah BUMN
+                            </div>
+                            <div class="absolute bottom-2 left-2 bg-navy-950/80 backdrop-blur-md px-2.5 py-0.5 rounded text-[10px] font-bold text-gold-300">
+                                <i class="fa-solid fa-camera me-1"></i> On-Site Rumah BUMN Solo
+                            </div>
+                        </div>
+
+                        <h3 class="text-base font-bold text-navy-900">MSME Relations Intern</h3>
+                        <p class="text-xs font-bold text-gold-600 mb-0.5">Rumah BUMN Solo</p>
+                        <p class="text-[11px] text-slate-400 mb-2"><i class="fa-solid fa-location-dot me-1"></i>Surakarta, Jawa Tengah</p>
+                        <button onclick="event.stopPropagation(); openPhotoModal('cert-magang-rumah-bumn.jpg', 'Sertifikat Program Magang - Rumah BUMN Solo')" class="mb-4 px-2 py-1 rounded-lg bg-navy-50 hover:bg-navy-100 text-navy-900 text-[10px] font-bold border border-slate-200 transition-all flex items-center gap-1">
+                            <i class="fa-solid fa-certificate text-gold-600"></i> Lihat Sertifikat Magang
+                        </button>
+
+                        <ul class="space-y-2 text-xs text-slate-600 mb-6">
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-circle-check text-gold-600 text-xs mt-0.5 shrink-0"></i>
+                                <span>Menyusun modul & materi pelatihan digital marketing (e-commerce & sosmed) untuk UMKM.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-circle-check text-gold-600 text-xs mt-0.5 shrink-0"></i>
+                                <span>Mendampingi langsung 10 UMKM dalam optimasi profil bisnis & strategi promosi digital.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-circle-check text-gold-600 text-xs mt-0.5 shrink-0"></i>
+                                <span>Penyusunan laporan evaluasi program berbasis model evaluasi CIPP.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pt-4 border-t border-slate-100 flex flex-wrap gap-1.5">
+                        <span class="px-2 py-1 rounded bg-slate-100 text-navy-900 text-[10px] font-semibold">Model Evaluasi CIPP</span>
+                        <span class="px-2 py-1 rounded bg-slate-100 text-navy-900 text-[10px] font-semibold">Pendampingan UMKM</span>
+                    </div>
+                </div>
+
+                <!-- BEM Leadership Card -->
+                <div class="exp-card exp-org bg-navy-900 text-white rounded-2xl p-6 border border-gold-500/30 shadow-md card-hover flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="px-2.5 py-1 rounded-md text-[11px] font-bold bg-gold-500 text-navy-950">Kepemimpinan</span>
+                            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-800 text-gold-300">BEM FEB UNS</span>
+                        </div>
+
+                        <!-- Combined BEM Leadership Photos Gallery -->
+                        <div class="mb-4">
+                            <!-- Main Featured Poster -->
+                            <div class="relative rounded-xl overflow-hidden bg-slate-800 border border-gold-500/30 group cursor-pointer mb-2" onclick="openPhotoModal('WhatsApp Image 2026-07-26 at 17.25.03.jpeg', 'Poster Resmi Menteri Koordinator Sosial Politik BEM FEB UNS - Zaki Fadhlan Adani')">
+                                <img src="WhatsApp Image 2026-07-26 at 17.25.03.jpeg" alt="Menko Sospol BEM FEB UNS" class="w-full h-44 object-cover object-top group-hover:scale-105 transition-transform duration-300" onerror="handleImgError(this, 'Poster Menko Sospol BEM FEB UNS')">
+                                <div class="absolute inset-0 bg-navy-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-bold gap-1.5">
+                                    <i class="fa-solid fa-magnifying-glass-plus text-gold-400 text-sm"></i> Lihat Poster Utama
+                                </div>
+                                <div class="absolute bottom-2 left-2 bg-navy-950/90 backdrop-blur-md px-2.5 py-0.5 rounded text-[10px] font-bold text-gold-300 border border-gold-500/30">
+                                    <i class="fa-solid fa-user-tie me-1"></i> Menko Sospol 2024
+                                </div>
+                            </div>
+                            
+                            <!-- Steering Committee Sub-Grid -->
+                            <div class="grid grid-cols-2 gap-2">
+                                <div class="relative rounded-lg overflow-hidden bg-slate-800 border border-gold-500/20 group cursor-pointer" onclick="openPhotoModal('WhatsApp Image 2026-07-26 at 17.25.03 (1).jpeg', 'Steering Committee BEM FEB UNS - Kabinet Wirasena')">
+                                    <img src="WhatsApp Image 2026-07-26 at 17.25.03 (1).jpeg" alt="Steering Committee 1" class="w-full h-20 object-cover object-center group-hover:scale-105 transition-transform duration-300" onerror="handleImgError(this, 'SC Event BEM FEB UNS')">
+                                    <div class="absolute inset-0 bg-navy-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-[10px] font-bold">
+                                        <i class="fa-solid fa-expand text-gold-400 me-1"></i> SC Event 1
+                                    </div>
+                                </div>
+                                <div class="relative rounded-lg overflow-hidden bg-slate-800 border border-gold-500/20 group cursor-pointer" onclick="openPhotoModal('WhatsApp Image 2026-07-26 at 17.25.03 (2).jpeg', 'Steering Committee BEM FEB UNS - Jaket Almamater UNS')">
+                                    <img src="WhatsApp Image 2026-07-26 at 17.25.03 (2).jpeg" alt="Steering Committee 2" class="w-full h-20 object-cover object-center group-hover:scale-105 transition-transform duration-300" onerror="handleImgError(this, 'SC Tim Almamater UNS')">
+                                    <div class="absolute inset-0 bg-navy-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-[10px] font-bold">
+                                        <i class="fa-solid fa-expand text-gold-400 me-1"></i> Tim Almamater
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 class="text-base font-bold text-white">Menteri Koordinator Sosial Politik</h3>
+                        <p class="text-xs font-bold text-gold-400 mb-0.5">BEM FEB Universitas Sebelas Maret</p>
+                        <p class="text-[11px] text-slate-400 mb-4"><i class="fa-solid fa-calendar me-1"></i>April 2024 - Des 2024</p>
+
+                        <ul class="space-y-2 text-xs text-slate-300 mb-6">
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-angle-right text-gold-400 text-xs mt-0.5 shrink-0"></i>
+                                <span>Merancang & mengoordinasikan program kerja sosial-politik sesuai Tri Dharma Perguruan Tinggi.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-angle-right text-gold-400 text-xs mt-0.5 shrink-0"></i>
+                                <span>Menerbitkan artikel analisis kebijakan isu sosio-ekonomi untuk daya kritis mahasiswa.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-angle-right text-gold-400 text-xs mt-0.5 shrink-0"></i>
+                                <span>Memimpin seluruh departemen di bawah Kemenko Sospol mencapai target berdampak.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pt-4 border-t border-slate-800 flex flex-wrap gap-1.5">
+                        <span class="px-2 py-1 rounded bg-slate-800 text-gold-300 text-[10px] font-semibold">Strategic Leadership</span>
+                        <span class="px-2 py-1 rounded bg-slate-800 text-gold-300 text-[10px] font-semibold">Public Policy Analysis</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications & Achievements Section -->
+    <section id="certifications" class="py-20 bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                
+                <!-- Left Column: Primary Certifications -->
+                <div class="lg:col-span-7">
+                    <div class="mb-8">
+                        <span class="text-xs font-bold uppercase tracking-widest text-gold-600">Lisensi & Standar Industri</span>
+                        <h2 class="text-3xl font-extrabold text-navy-900 mt-1">Sertifikasi Profesional Resume-Ready</h2>
+                        <p class="text-xs text-slate-500 mt-1">Klik kartu di bawah untuk melihat rincian unit kompetensi & transkrip nilai resmi.</p>
+                    </div>
+
+                    <div class="space-y-4">
+                        
+                        <!-- ISO 27001 Card -->
+                        <div class="p-5 rounded-2xl border border-slate-200 bg-slate-50 flex items-start space-x-4 hover:border-gold-500 transition-colors shadow-sm cursor-pointer" onclick="showCertModal('iso27001')">
+                            <div class="w-12 h-12 rounded-xl bg-navy-900 text-gold-400 flex items-center justify-center shrink-0 text-xl shadow-md border border-gold-500/30">
+                                <i class="fa-solid fa-shield-cat"></i>
+                            </div>
+                            <div class="flex-grow">
+                                <div class="flex items-center justify-between">
+                                    <span class="text-xs font-bold text-gold-600">Juli 2026</span>
+                                    <span class="px-2 py-0.5 rounded text-[10px] font-extrabold bg-emerald-100 text-emerald-800">Skor Ujian: 95/100 (Lulus)</span>
+                                </div>
+                                <h4 class="text-base font-bold text-navy-900 mt-0.5">ISO/IEC 27001:2022 ISMS Lead Auditor</h4>
+                                <p class="text-xs text-slate-500">Accurate Global Inc. & PT Global System Intl | Cert #026LAISMS18</p>
+                                <div class="text-[11px] text-slate-600 mt-2 bg-white p-2.5 rounded border border-slate-200 flex items-center justify-between">
+                                    <span><i class="fa-solid fa-check text-emerald-600 me-1"></i>Audit Keamanan Informasi Terdaftar Exemplar Global</span>
+                                    <span class="text-[10px] font-bold text-navy-900 hover:underline">Detail Transkrip <i class="fa-solid fa-chevron-right text-[9px]"></i></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CTT ATPI & Brevet Pajak Card -->
+                        <div class="p-5 rounded-2xl border border-slate-200 bg-slate-50 flex items-start space-x-4 hover:border-gold-500 transition-colors shadow-sm cursor-pointer" onclick="showCertModal('brevet')">
+                            <div class="w-12 h-12 rounded-xl bg-navy-900 text-gold-400 flex items-center justify-center shrink-0 text-xl shadow-md border border-gold-500/30">
+                                <i class="fa-solid fa-receipt"></i>
+                            </div>
+                            <div class="flex-grow">
+                                <div class="flex items-center justify-between">
+                                    <span class="text-xs font-bold text-gold-600">Juni 2026</span>
+                                    <span class="px-2 py-0.5 rounded text-[10px] font-extrabold bg-emerald-100 text-emerald-800">Lisensi CTT ATPI & Transkrip A</span>
+                                </div>
+                                <h4 class="text-base font-bold text-navy-900 mt-0.5">Certified Tax Technician (CTT) & Brevet Pajak A/B</h4>
+                                <p class="text-xs text-slate-500">ATPI (#026.376/PTSP-TP/ATPI/VI/2026) & FEB UNS (#54.25/UN27.04.1/KP.15/2026)</p>
+                                <div class="text-[11px] text-slate-600 mt-2 bg-white p-2.5 rounded border border-slate-200 flex items-center justify-between">
+                                    <span><i class="fa-solid fa-check text-emerald-600 me-1"></i>17 Unit Kompetensi CTT, PPh OP/Badan, PPN, DJP Online & Akuntansi</span>
+                                    <span class="text-[10px] font-bold text-navy-900 hover:underline">Lihat 17 Kompetency CTT & Nilai <i class="fa-solid fa-chevron-right text-[9px]"></i></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Banking Risk Management Card -->
+                        <div class="p-5 rounded-2xl border border-slate-200 bg-slate-50 flex items-start space-x-4 hover:border-gold-500 transition-colors shadow-sm cursor-pointer" onclick="showCertModal('bnsp')">
+                            <div class="w-12 h-12 rounded-xl bg-navy-900 text-gold-400 flex items-center justify-center shrink-0 text-xl shadow-md border border-gold-500/30">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </div>
+                            <div class="flex-grow">
+                                <div class="flex items-center justify-between">
+                                    <span class="text-xs font-bold text-gold-600">Oktober 2025</span>
+                                    <span class="px-2 py-0.5 rounded text-[10px] font-extrabold bg-blue-100 text-blue-800">Sertifikat BNSP</span>
+                                </div>
+                                <h4 class="text-base font-bold text-navy-900 mt-0.5">Sertifikasi Manajemen Risiko Perbankan</h4>
+                                <p class="text-xs text-slate-500">Badan Nasional Sertifikasi Profesi (BNSP) | Reg #KEU 1847 00000028 2025</p>
+                                <div class="text-[11px] text-slate-600 mt-2 bg-white p-2.5 rounded border border-slate-200 flex items-center justify-between">
+                                    <span><i class="fa-solid fa-check text-emerald-600 me-1"></i>5 Unit Kompetensi: Risk Coverage, Risk Appetite, Governance, Culture & SIMR</span>
+                                    <span class="text-[10px] font-bold text-navy-900 hover:underline">Detail 5 Unit Kompetensi <i class="fa-solid fa-chevron-right text-[9px]"></i></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Secondary Certs Grid -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <div class="p-3.5 rounded-xl border border-slate-200 bg-slate-50">
+                                <div class="flex justify-between items-center mb-1">
+                                    <span class="text-[10px] font-bold text-gold-600">Juni 2026</span>
+                                    <span class="text-[9px] font-bold px-1.5 py-0.5 bg-blue-100 text-blue-800 rounded">IDX Jawa Timur</span>
+                                </div>
+                                <h5 class="text-xs font-bold text-navy-900">Sekolah Pasar Modal (SPM)</h5>
+                                <p class="text-[11px] text-slate-500">Bursa Efek Indonesia & KSEI</p>
+                            </div>
+
+                            <div class="p-3.5 rounded-xl border border-slate-200 bg-slate-50">
+                                <div class="flex justify-between items-center mb-1">
+                                    <span class="text-[10px] font-bold text-gold-600">Desember 2025</span>
+                                    <span class="text-[9px] font-bold px-1.5 py-0.5 bg-purple-100 text-purple-800 rounded">Cert #CCTD781332</span>
+                                </div>
+                                <h5 class="text-xs font-bold text-navy-900">Certified Content Operation</h5>
+                                <p class="text-[11px] text-slate-500">TikTok Shop & Tokopedia</p>
+                            </div>
+
+                            <div class="p-3.5 rounded-xl border border-slate-200 bg-slate-50 hover:border-gold-500 transition-colors cursor-pointer" onclick="showCertModal('iso_systems')">
+                                <div class="flex justify-between items-center mb-1">
+                                    <span class="text-[10px] font-bold text-gold-600">Maret 2025</span>
+                                    <span class="text-[9px] font-bold px-1.5 py-0.5 bg-slate-200 text-slate-700 rounded">Winsor Management</span>
+                                </div>
+                                <h5 class="text-xs font-bold text-navy-900">ISO Systems (9001 QMS, 14001 EMS, 45001 OHSMS)</h5>
+                                <p class="text-[11px] text-slate-500">Cert #004/WQ/ISO/III/2025, #013 & #039</p>
+                                <p class="text-[10px] font-bold text-navy-900 mt-1">Lihat 3 Sertifikat Asli <i class="fa-solid fa-chevron-right text-[9px]"></i></p>
+                            </div>
+
+                            <div class="p-3.5 rounded-xl border border-slate-200 bg-slate-50 hover:border-gold-500 transition-colors cursor-pointer" onclick="openPhotoModal('cert-english-academic.jpg', 'Certificate of English for Academic Purposes - UNS Language Center')">
+                                <div class="flex justify-between items-center mb-1">
+                                    <span class="text-[10px] font-bold text-gold-600">Tahun 2025</span>
+                                    <span class="text-[9px] font-bold px-1.5 py-0.5 bg-emerald-100 text-emerald-800 rounded">Grade B+ (78 / 3.30)</span>
+                                </div>
+                                <h5 class="text-xs font-bold text-navy-900">English for Academic Purposes</h5>
+                                <p class="text-[11px] text-slate-500">UNS Language Center | Cert #1448/UN27.38/TTA</p>
+                                <p class="text-[10px] font-bold text-navy-900 mt-1">Lihat Sertifikat Asli <i class="fa-solid fa-chevron-right text-[9px]"></i></p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Right Column: Achievements & Awards -->
+                <div class="lg:col-span-5 bg-navy-900 text-white rounded-2xl p-6 sm:p-8 border border-gold-500/30 flex flex-col justify-between shadow-xl">
+                    <div>
+                        <div class="mb-6">
+                            <span class="text-xs font-bold uppercase tracking-widest text-gold-400">Pencapaian Unik</span>
+                            <h3 class="text-2xl font-extrabold text-white mt-0.5">Penghargaan & Prestasi</h3>
+                        </div>
+
+                        <div class="space-y-5">
+                            
+                            <div class="flex items-start space-x-3">
+                                <div class="w-8 h-8 rounded-lg bg-gold-500/20 text-gold-400 flex items-center justify-center shrink-0 mt-0.5 border border-gold-500/30">
+                                    <i class="fa-solid fa-trophy text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xs font-bold text-gold-300">Graduated Cum Laude (IPK 3.74)</h4>
+                                    <p class="text-[11px] text-slate-300">FEB Universitas Sebelas Maret (Juli 2026)</p>
+                                </div>
+                            </div>
+
+                            <!-- Best Project Feasibility with Photo Trigger -->
+                            <div class="flex items-start justify-between space-x-3 p-2.5 rounded-xl bg-navy-950/70 border border-gold-500/20">
+                                <div class="flex items-start space-x-3">
+                                    <div class="w-8 h-8 rounded-lg bg-gold-500/20 text-gold-400 flex items-center justify-center shrink-0 mt-0.5 border border-gold-500/30">
+                                        <i class="fa-solid fa-award text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-xs font-bold text-gold-300">Best Project Feasibility Group (INNERA)</h4>
+                                        <p class="text-[11px] text-slate-300">Praktik Simulasi Manajerial FEB UNS (Desember 2025)</p>
+                                    </div>
+                                </div>
+                                <button onclick="showCertModal('psm_award')" class="shrink-0 px-2.5 py-1 rounded-lg bg-gold-500/20 text-gold-300 hover:bg-gold-500 hover:text-navy-900 transition-all text-[10px] font-bold border border-gold-500/40 flex items-center gap-1">
+                                    <i class="fa-solid fa-camera"></i> Bukti
+                                </button>
+                            </div>
+
+                            <!-- PPK Ormawa with Media Coverage Trigger -->
+                            <div class="flex items-start justify-between space-x-3 p-2.5 rounded-xl bg-navy-950/70 border border-gold-500/20">
+                                <div class="flex items-start space-x-3">
+                                    <div class="w-8 h-8 rounded-lg bg-gold-500/20 text-gold-400 flex items-center justify-center shrink-0 mt-0.5 border border-gold-500/30">
+                                        <i class="fa-solid fa-hand-holding-dollar text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-xs font-bold text-gold-300">Penerima Hibah PPK Ormawa Kemendikbudristek</h4>
+                                        <p class="text-[11px] text-slate-300">SK No. 7421/E2/DT.01.01/2024 • Diliput Solopos News</p>
+                                    </div>
+                                </div>
+                                <button onclick="showCertModal('ppk_ormawa')" class="shrink-0 px-2.5 py-1 rounded-lg bg-gold-500/20 text-gold-300 hover:bg-gold-500 hover:text-navy-900 transition-all text-[10px] font-bold border border-gold-500/40 flex items-center gap-1">
+                                    <i class="fa-solid fa-newspaper"></i> Liputan
+                                </button>
+                            </div>
+
+                            <!-- FMEI Delegation with Photo Trigger -->
+                            <div class="flex items-start justify-between space-x-3 p-2.5 rounded-xl bg-navy-950/70 border border-gold-500/20">
+                                <div class="flex items-start space-x-3">
+                                    <div class="w-8 h-8 rounded-lg bg-gold-500/20 text-gold-400 flex items-center justify-center shrink-0 mt-0.5 border border-gold-500/30">
+                                        <i class="fa-solid fa-users text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-xs font-bold text-gold-300">Delegasi Forum Mahasiswa Ekonomi Indonesia</h4>
+                                        <p class="text-[11px] text-slate-300">Kongres FMEI di Universitas Gadjah Mada (Mei 2023)</p>
+                                    </div>
+                                </div>
+                                <button onclick="showCertModal('fmei')" class="shrink-0 px-2.5 py-1 rounded-lg bg-gold-500/20 text-gold-300 hover:bg-gold-500 hover:text-navy-900 transition-all text-[10px] font-bold border border-gold-500/40 flex items-center gap-1">
+                                    <i class="fa-solid fa-image"></i> Foto
+                                </button>
+                            </div>
+
+                            <div class="flex items-start space-x-3">
+                                <div class="w-8 h-8 rounded-lg bg-gold-500/20 text-gold-400 flex items-center justify-center shrink-0 mt-0.5 border border-gold-500/30">
+                                    <i class="fa-solid fa-lightbulb text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xs font-bold text-gold-300">Peserta Pekan Intelektual Mahasiswa (PIM)</h4>
+                                    <p class="text-[11px] text-slate-300">Analisis Implementasi Pajak Karbon untuk Ekonomi Hijau</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="mt-8 pt-5 border-t border-slate-800">
+                        <p class="text-[11px] text-slate-400 italic">"Pencapaian akademis dan penghargaan organisasi membuktikan konsistensi kerja keras dan dedikasi saya."</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Matrix Section -->
+    <section id="skills" class="py-20 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="text-xs font-bold uppercase tracking-widest text-gold-600">Matriks Kompetensi Kerja</span>
+                <h2 class="text-3xl font-extrabold text-navy-900 mt-1">Keahlian & Perangkat Lunak</h2>
+                <div class="w-16 h-1 bg-gold-500 mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <!-- Hard Skills -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
+                    <div class="flex items-center space-x-3 mb-5">
+                        <div class="w-10 h-10 rounded-xl bg-navy-900 text-gold-400 flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                        <h3 class="text-base font-bold text-navy-900">Hard Skills Utama</h3>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2.5 py-1.5 rounded-lg bg-slate-100 text-navy-900 text-xs font-semibold border border-slate-200">Credit Administration</span>
+                        <span class="px-2.5 py-1.5 rounded-lg bg-slate-100 text-navy-900 text-xs font-semibold border border-slate-200">KUR Verification</span>
+                        <span class="px-2.5 py-1.5 rounded-lg bg-slate-100 text-navy-900 text-xs font-semibold border border-slate-200">Document Audit</span>
+                        <span class="px-2.5 py-1.5 rounded-lg bg-slate-100 text-navy-900 text-xs font-semibold border border-slate-200">Financial Flow Analysis</span>
+                        <span class="px-2.5 py-1.5 rounded-lg bg-slate-100 text-navy-900 text-xs font-semibold border border-slate-200">Certified Tax Technician (CTT)</span>
+                        <span class="px-2.5 py-1.5 rounded-lg bg-slate-100 text-navy-900 text-xs font-semibold border border-slate-200">DJP Online & Tax Compliance</span>
+                        <span class="px-2.5 py-1.5 rounded-lg bg-slate-100 text-navy-900 text-xs font-semibold border border-slate-200">ISO 27001 Internal Audit</span>
+                        <span class="px-2.5 py-1.5 rounded-lg bg-slate-100 text-navy-900 text-xs font-semibold border border-slate-200">Banking Risk Assessment</span>
+                        <span class="px-2.5 py-1.5 rounded-lg bg-slate-100 text-navy-900 text-xs font-semibold border border-slate-200">Research & LPJ Writing</span>
+                    </div>
+                </div>
+
+                <!-- Software & Tools -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
+                    <div class="flex items-center space-x-3 mb-5">
+                        <div class="w-10 h-10 rounded-xl bg-navy-900 text-gold-400 flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+                        <h3 class="text-base font-bold text-navy-900">Software & Tools</h3>
+                    </div>
+
+                    <div class="space-y-2.5 text-xs">
+                        <div class="flex items-center justify-between p-2 rounded-lg bg-slate-50 border border-slate-100">
+                            <span class="font-bold text-navy-900"><i class="fa-regular fa-file-excel text-emerald-600 me-2"></i>MS Excel</span>
+                            <span class="font-extrabold text-gold-600">Advanced / Data Processing</span>
+                        </div>
+                        <div class="flex items-center justify-between p-2 rounded-lg bg-slate-50 border border-slate-100">
+                            <span class="font-bold text-navy-900"><i class="fa-solid fa-chart-pie text-blue-600 me-2"></i>SPSS</span>
+                            <span class="font-semibold text-slate-500">Statistical Analysis</span>
+                        </div>
+                        <div class="flex items-center justify-between p-2 rounded-lg bg-slate-50 border border-slate-100">
+                            <span class="font-bold text-navy-900"><i class="fa-solid fa-vault text-amber-600 me-2"></i>Ecosystem 197</span>
+                            <span class="font-semibold text-slate-500">BRI KUR System</span>
+                        </div>
+                        <div class="flex items-center justify-between p-2 rounded-lg bg-slate-50 border border-slate-100">
+                            <span class="font-bold text-navy-900"><i class="fa-regular fa-file-word text-blue-700 me-2"></i>MS Word & PPT</span>
+                            <span class="font-semibold text-slate-500">Reporting & Deck</span>
+                        </div>
+                        <div class="flex items-center justify-between p-2 rounded-lg bg-slate-50 border border-slate-100">
+                            <span class="font-bold text-navy-900"><i class="fa-brands fa-google text-red-500 me-2"></i>Google Workspace</span>
+                            <span class="font-semibold text-slate-500">Collaboration</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
+                    <div class="flex items-center space-x-3 mb-5">
+                        <div class="w-10 h-10 rounded-xl bg-navy-900 text-gold-400 flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+                        <h3 class="text-base font-bold text-navy-900">Soft Skills & Karakter</h3>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2.5 py-1.5 rounded-lg bg-gold-100/80 text-navy-900 text-xs font-semibold border border-gold-300">Attention to Detail</span>
+                        <span class="px-2.5 py-1.5 rounded-lg bg-gold-100/80 text-navy-900 text-xs font-semibold border border-gold-300">Effective Communication</span>
+                        <span class="px-2.5 py-1.5 rounded-lg bg-gold-100/80 text-navy-900 text-xs font-semibold border border-gold-300">Analytical Thinking</span>
+                        <span class="px-2.5 py-1.5 rounded-lg bg-gold-100/80 text-navy-900 text-xs font-semibold border border-gold-300">Cross-functional Teamwork</span>
+                        <span class="px-2.5 py-1.5 rounded-lg bg-gold-100/80 text-navy-900 text-xs font-semibold border border-gold-300">Time Management</span>
+                        <span class="px-2.5 py-1.5 rounded-lg bg-gold-100/80 text-navy-900 text-xs font-semibold border border-gold-300">SOP Compliance</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="text-xs font-bold uppercase tracking-widest text-gold-600">Terbuka Rekrutmen Segera</span>
+                <h2 class="text-3xl font-extrabold text-navy-900 mt-1">Hubungi & Undang Diskusi Karir</h2>
+                <p class="text-xs sm:text-sm text-slate-500 mt-2">Apakah Anda tim HR / Hiring Manager? Hubungi saya secara langsung untuk wawancara atau pengiriman berkas.</p>
+                <div class="w-16 h-1 bg-gold-500 mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+                
+                <!-- Direct Contact Cards -->
+                <div class="lg:col-span-5 space-y-4">
+                    
+                    <!-- WhatsApp Card -->
+                    <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 flex items-center justify-between">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 rounded-xl bg-emerald-600 text-white flex items-center justify-center text-xl shrink-0 shadow-sm">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <p class="text-[10px] text-slate-400 font-extrabold uppercase">WHATSAPP LANGSUNG</p>
+                                <a href="https://wa.me/62895408034646" target="_blank" class="text-sm font-bold text-navy-900 hover:text-emerald-600 transition-colors">+62 895-408-034-646</a>
+                            </div>
+                        </div>
+                        <button onclick="copyToClipboard('+62895408034646', 'Nomor WhatsApp')" class="p-2 text-slate-400 hover:text-navy-900" title="Salin Kontak">
+                            <i class="fa-regular fa-copy text-base"></i>
+                        </button>
+                    </div>
+
+                    <!-- Email Card -->
+                    <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 flex items-center justify-between">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 rounded-xl bg-navy-900 text-gold-400 flex items-center justify-center text-xl shrink-0 shadow-sm border border-gold-500/30">
+                                <i class="fa-regular fa-envelope"></i>
+                            </div>
+                            <div>
+                                <p class="text-[10px] text-slate-400 font-extrabold uppercase">EMAIL RESMI</p>
+                                <a href="mailto:zakifadhlan@gmail.com" class="text-sm font-bold text-navy-900 hover:text-gold-600 transition-colors">zakifadhlan@gmail.com</a>
+                            </div>
+                        </div>
+                        <button onclick="copyToClipboard('zakifadhlan@gmail.com', 'Email')" class="p-2 text-slate-400 hover:text-navy-900" title="Salin Email">
+                            <i class="fa-regular fa-copy text-base"></i>
+                        </button>
+                    </div>
+
+                    <!-- LinkedIn Card -->
+                    <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 flex items-center justify-between">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 rounded-xl bg-blue-700 text-white flex items-center justify-center text-xl shrink-0 shadow-sm">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </div>
+                            <div>
+                                <p class="text-[10px] text-slate-400 font-extrabold uppercase">PROFIL LINKEDIN</p>
+                                <a href="https://www.linkedin.com/in/zakifadhlanadaniabdurrahman" target="_blank" class="text-xs font-bold text-navy-900 hover:text-blue-700 transition-colors">zakifadhlanadaniabdurrahman</a>
+                            </div>
+                        </div>
+                        <a href="https://www.linkedin.com/in/zakifadhlanadaniabdurrahman" target="_blank" class="p-2 text-slate-400 hover:text-navy-900">
+                            <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
+                        </a>
+                    </div>
+
+                    <!-- Location Card -->
+                    <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 flex items-center space-x-4">
+                        <div class="w-12 h-12 rounded-xl bg-navy-900 text-gold-400 flex items-center justify-center text-xl shrink-0 border border-gold-500/30">
+                            <i class="fa-solid fa-map-location-dot"></i>
+                        </div>
+                        <div>
+                            <p class="text-[10px] text-slate-400 font-extrabold uppercase">DOMISILI & MOBILITAS</p>
+                            <p class="text-xs font-bold text-navy-900">Cimahi, Jawa Barat (Siap Relokasi Nasional)</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Interactive Form for HR -->
+                <div class="lg:col-span-7 bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm">
+                    <form id="contact-form" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label for="form-name" class="block text-xs font-bold text-navy-900 uppercase mb-1">Nama Rekruiter / Instansi</label>
+                                <input type="text" id="form-name" required placeholder="Contoh: Budi (HRD PT Bank ABC)" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-gold-500 focus:border-gold-500 outline-none text-xs transition-all">
+                            </div>
+                            <div>
+                                <label for="form-email" class="block text-xs font-bold text-navy-900 uppercase mb-1">Email Perusahaan</label>
+                                <input type="email" id="form-email" required placeholder="hrd@perusahaan.com" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-gold-500 focus:border-gold-500 outline-none text-xs transition-all">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="form-subject" class="block text-xs font-bold text-navy-900 uppercase mb-1">Tujuan / Posisi Tawaran</label>
+                            <select id="form-subject" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-gold-500 focus:border-gold-500 outline-none text-xs transition-all bg-white">
+                                <option value="Undangan Wawancara HR">Undangan Wawancara HR / User</option>
+                                <option value="Penawaran Posisi Internal Audit">Penawaran Posisi Internal Audit / Compliance</option>
+                                <option value="Penawaran Posisi Risk Management">Penawaran Posisi Risk Management</option>
+                                <option value="Penawaran Posisi Credit Analyst">Penawaran Posisi Credit Analyst / Perbankan</option>
+                                <option value="Penawaran Posisi ODP / Management Trainee">Penawaran Posisi ODP / Management Trainee</option>
+                                <option value="Diskusi Kualifikasi Lainnya">Diskusi Kualifikasi Lainnya</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="form-message" class="block text-xs font-bold text-navy-900 uppercase mb-1">Detail Pesan / Undangan</label>
+                            <textarea id="form-message" rows="4" required placeholder="Tuliskan tanggal jadwal wawancara atau detail posisi yang ditawarkan..." class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-gold-500 focus:border-gold-500 outline-none text-xs transition-all"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-3.5 rounded-xl bg-navy-900 text-gold-400 font-bold text-xs hover:bg-navy-800 transition-all shadow-md border border-gold-500/30 flex items-center justify-center space-x-2">
+                            <i class="fa-regular fa-paper-plane"></i>
+                            <span>Kirim Undangan Wawancara</span>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Custom Toast Alert -->
+    <div id="toast" class="fixed bottom-6 right-6 transform translate-y-20 opacity-0 transition-all duration-300 bg-navy-900 text-white px-5 py-3 rounded-xl shadow-2xl border border-gold-500 flex items-center space-x-3 z-50 pointer-events-none">
+        <i class="fa-solid fa-circle-check text-gold-400 text-lg"></i>
+        <span id="toast-message" class="text-xs font-semibold">Pesan berhasil dikirim!</span>
+    </div>
+
+    <!-- Photo Lightbox Modal -->
+    <div id="photo-modal" class="fixed inset-0 z-50 bg-navy-950/90 backdrop-blur-md hidden flex items-center justify-center p-4 transition-all duration-300">
+        <div class="relative bg-white rounded-2xl max-w-2xl w-full p-4 overflow-hidden shadow-2xl border border-gold-500/40">
+            <div class="flex justify-between items-center pb-3 mb-3 border-b border-slate-100">
+                <h4 id="modal-caption" class="text-xs font-bold text-navy-900 uppercase tracking-wide">Dokumentasi Foto</h4>
+                <button onclick="closePhotoModal()" class="w-8 h-8 rounded-full bg-slate-100 text-slate-600 hover:bg-navy-900 hover:text-white transition-colors flex items-center justify-center text-sm">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="max-h-[75vh] overflow-hidden rounded-xl bg-slate-900 flex items-center justify-center">
+                <img id="modal-image" src="" alt="Dokumentasi Full View" class="max-h-[70vh] w-auto object-contain">
+            </div>
+            <div class="mt-3 text-center">
+                <button onclick="closePhotoModal()" class="px-5 py-2 rounded-xl bg-navy-900 text-gold-400 font-bold text-xs hover:bg-navy-800 transition-all">
+                    Tutup Tampilan
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Interactive Certificate Details Modal -->
+    <div id="cert-modal" class="fixed inset-0 z-50 bg-navy-950/90 backdrop-blur-md hidden flex items-center justify-center p-4 transition-all duration-300">
+        <div class="relative bg-white rounded-2xl max-w-xl w-full p-6 shadow-2xl border border-gold-500/40">
+            <div class="flex justify-between items-center pb-3 mb-4 border-b border-slate-100">
+                <h4 id="cert-title" class="text-sm font-bold text-navy-900 uppercase tracking-wide">Detail Sertifikasi Terverifikasi</h4>
+                <button onclick="closeCertModal()" class="w-8 h-8 rounded-full bg-slate-100 text-slate-600 hover:bg-navy-900 hover:text-white transition-colors flex items-center justify-center text-sm">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            
+            <div id="cert-body" class="space-y-4 text-xs">
+                <!-- Dynamic Content injected via JS -->
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-slate-100 flex justify-end">
+                <button onclick="closeCertModal()" class="px-5 py-2 rounded-xl bg-navy-900 text-gold-400 font-bold text-xs hover:bg-navy-800 transition-all">
+                    Tutup Detail
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-navy-950 text-white py-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center space-x-3">
+                <div class="w-8 h-8 rounded-lg bg-navy-900 text-gold-400 flex items-center justify-center font-bold text-sm border border-gold-500/30">
+                    ZF
+                </div>
+                <p class="text-xs text-slate-400">© 2026 Zaki Fadhlan Adani Abdurrahman, S.M. All rights reserved.</p>
+            </div>
+
+            <div class="flex space-x-6 text-xs text-slate-400">
+                <a href="#hero" class="hover:text-gold-400 transition-colors">Kembali ke Atas <i class="fa-solid fa-arrow-up ms-1"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Intelligent multi-path image error handler
+        function handleExecutiveImgError(img, altText) {
+            const fallbackPaths = [
+                "df790401-e9c2-416d-8641-71034b5b2ae1_3.jpg",
+                "df790401-e9c2-416d-8641-71034b5b2ae1_2.jpg",
+                "df790401-e9c2-416d-8641-71034b5b2ae1.jpg"
+            ];
+            
+            let currentTry = parseInt(img.getAttribute('data-try-count') || '0');
+            
+            if (currentTry < fallbackPaths.length) {
+                img.setAttribute('data-try-count', (currentTry + 1).toString());
+                img.src = fallbackPaths[currentTry];
+            } else {
+                img.onerror = null;
+                img.src = `https://placehold.co/600x800/0b1329/d4af37?text=${encodeURIComponent(altText + ' - Formal Portrait')}`;
+            }
+        }
+
+        function handleImgError(img, altText) {
+            img.onerror = null;
+            img.src = `https://placehold.co/600x400/0b1329/d4af37?text=${encodeURIComponent(altText)}`;
+        }
+
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        function filterExperience(category) {
+            const cards = document.querySelectorAll('.exp-card');
+            const buttons = document.querySelectorAll('.exp-filter-btn');
+
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-navy-900', 'text-gold-400', 'border-gold-500/30');
+                btn.classList.add('bg-white', 'text-slate-600', 'border-slate-200');
+            });
+
+            const activeBtn = document.getElementById(`btn-exp-${category}`);
+            if (activeBtn) {
+                activeBtn.classList.remove('bg-white', 'text-slate-600', 'border-slate-200');
+                activeBtn.classList.add('bg-navy-900', 'text-gold-400', 'border-gold-500/30');
+            }
+
+            cards.forEach(card => {
+                if (category === 'all') {
+                    card.style.display = 'flex';
+                } else {
+                    if (card.classList.contains(`exp-${category}`)) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                }
+            });
+        }
+
+        function copyToClipboard(text, label) {
+            const tempInput = document.createElement('input');
+            tempInput.value = text;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+
+            showToast(`${label} telah disalin ke clipboard!`);
+        }
+
+        function copyHRProfile() {
+            const profileText = "Zaki Fadhlan Adani Abdurrahman, S.M. | S1 Manajemen UNS Cum Laude (IPK 3.74) | ISO 27001 Lead Auditor (95/100, Cert #026LAISMS18) & Certified Tax Technician (CTT ATPI) | WA: +62895408034646 | Email: zakifadhlan@gmail.com";
+            copyToClipboard(profileText, "Ringkasan Profil HR");
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toast-message');
+            
+            toastMsg.textContent = message;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+
+            setTimeout(() => {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 3000);
+        }
+
+        function openPhotoModal(imgSrc, caption) {
+            const modal = document.getElementById('photo-modal');
+            const modalImg = document.getElementById('modal-image');
+            const modalCap = document.getElementById('modal-caption');
+
+            modalImg.onerror = function() {
+                this.onerror = null;
+                this.src = `https://placehold.co/800x600/0b1329/d4af37?text=${encodeURIComponent(caption)}`;
+            };
+
+            modalImg.src = imgSrc;
+            modalCap.textContent = caption;
+            modal.classList.remove('hidden');
+        }
+
+        function closePhotoModal() {
+            const modal = document.getElementById('photo-modal');
+            modal.classList.add('hidden');
+        }
+
+        function showCertModal(type) {
+            const modal = document.getElementById('cert-modal');
+            const title = document.getElementById('cert-title');
+            const body = document.getElementById('cert-body');
+
+            if (type === 'iso27001') {
+                title.textContent = 'ISO/IEC 27001:2022 ISMS Lead Auditor';
+                body.innerHTML = `
+                    <div class="p-3 bg-navy-50 rounded-xl border border-navy-100 space-y-2">
+                        <p class="font-bold text-navy-900">Nomor Sertifikat: <span class="font-mono text-gold-600">026LAISMS18</span></p>
+                        <p class="text-slate-600">Penerbit: Accurate Global Inc. (USA) & PT Global System International</p>
+                        <p class="text-slate-600">Registrasi Internasional: Exemplar Global RTP Certified Training</p>
+                        <p class="font-bold text-emerald-700">Skor Ujian Akhir: 95 / 100 (Lulus - Excellent Pass)</p>
+                    </div>
+                    <div class="space-y-1.5">
+                        <p class="font-bold text-navy-900">Cakupan Kualifikasi Audit:</p>
+                        <ul class="list-disc list-inside text-slate-600 space-y-1">
+                            <li>Pelaksanaan Audit Keamanan Informasi Internal & Eksternal.</li>
+                            <li>Identifikasi Celah Kepatuhan (Compliance Gap Analysis) ISO 27001.</li>
+                            <li>Penyusunan Audit Trail, Non-Conformity Report (NCR), & Tindakan Korektif.</li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-wrap gap-1.5 pt-2 border-t border-slate-100">
+                        <button onclick="openPhotoModal('cert-iso27001-leadauditor.jpg', 'Certificate ISO/IEC 27001:2022 Lead Auditor - Accurate Global Inc.')" class="px-2.5 py-1.5 rounded-lg bg-navy-50 hover:bg-navy-100 text-navy-900 text-[10px] font-bold border border-slate-200 flex items-center gap-1"><i class="fa-solid fa-certificate text-gold-600"></i> Sertifikat Asli</button>
+                        <button onclick="openPhotoModal('cert-iso27001-summary.jpg', 'Summary Report Nilai Ujian 95/100 - PT Global System International')" class="px-2.5 py-1.5 rounded-lg bg-navy-50 hover:bg-navy-100 text-navy-900 text-[10px] font-bold border border-slate-200 flex items-center gap-1"><i class="fa-solid fa-file-lines text-gold-600"></i> Summary Report Nilai</button>
+                    </div>
+                `;
+            } else if (type === 'brevet') {
+                title.textContent = 'Certified Tax Technician (CTT) & Brevet Pajak A/B';
+                body.innerHTML = `
+                    <div class="p-3 bg-navy-50 rounded-xl border border-navy-100 space-y-1.5">
+                        <p class="font-bold text-navy-900">Nomor Sertifikat ATPI: <span class="font-mono text-gold-600">026.376/PTSP-TP/ATPI/VI/2026</span></p>
+                        <p class="font-bold text-navy-900">Nomor Registrasi CTT: <span class="font-mono text-gold-600">CTT 04.05.000.026.376 2026</span></p>
+                        <p class="font-bold text-navy-900">Nomor Sertifikat FEB UNS: <span class="font-mono text-gold-600">54.25/UN27.04.1/KP.15/2026</span></p>
+                        <p class="text-slate-600">Penerbit Resmi: Asosiasi Teknisi Perpajakan Indonesia (ATPI) & FEB UNS</p>
+                        <p class="text-slate-600">Sebutan Profesi: <strong class="text-navy-900">Professional Certified Tax Technician (CTT)</strong></p>
+                    </div>
+                    <div class="space-y-2">
+                        <p class="font-bold text-navy-900">Daftar 17 Unit Kompetensi Teruji CTT ATPI:</p>
+                        <div class="grid grid-cols-2 gap-1.5 text-[10px]">
+                            <div class="p-1.5 bg-slate-50 rounded border">Pengetahuan Perpajakan Indonesia & DJP Online</div>
+                            <div class="p-1.5 bg-slate-50 rounded border">PPh Orang Pribadi & PPh Badan</div>
+                            <div class="p-1.5 bg-slate-50 rounded border">PPh Pasal 21 & 26</div>
+                            <div class="p-1.5 bg-slate-50 rounded border">PPh Pasal 22, 23, 4(2), 15</div>
+                            <div class="p-1.5 bg-slate-50 rounded border">PPN & PPn-BM</div>
+                            <div class="p-1.5 bg-slate-50 rounded border">Ketentuan Umum Perpajakan (KUP)</div>
+                            <div class="p-1.5 bg-slate-50 rounded border">Akuntansi Perpajakan 1 & 2</div>
+                            <div class="p-1.5 bg-slate-50 rounded border">PBB, BPHTB & Bea Materai</div>
+                            <div class="p-1.5 bg-slate-50 rounded border">Pajak Daerah & Retribusi Daerah</div>
+                            <div class="p-1.5 bg-slate-50 rounded border">Pengadilan Pajak & Penagihan Surat Paksa</div>
+                            <div class="p-1.5 bg-slate-50 rounded border">Kode Etik Umum & Standar Profesi CTT</div>
+                        </div>
+                    </div>
+                    <div class="pt-2 border-t border-slate-100">
+                        <p class="font-bold text-navy-900 mb-1">Rincian Nilai Transkrip FEB UNS:</p>
+                        <div class="grid grid-cols-2 gap-1.5 text-[11px]">
+                            <div class="p-1.5 bg-emerald-50 rounded border border-emerald-200">PPh Final, 22, 23, 24, 25: <strong class="text-emerald-800">A</strong></div>
+                            <div class="p-1.5 bg-emerald-50 rounded border border-emerald-200">Akuntansi Perpajakan: <strong class="text-emerald-800">A</strong></div>
+                            <div class="p-1.5 bg-slate-50 rounded border">PPh Pasal 21 & 26: <strong>A-</strong></div>
+                            <div class="p-1.5 bg-slate-50 rounded border">PPN & PPnBM: <strong>A-</strong></div>
+                            <div class="p-1.5 bg-slate-50 rounded border">Praktik SPT OP, Badan & Tax Planning: <strong>A-</strong></div>
+                            <div class="p-1.5 bg-emerald-50 rounded border border-emerald-200">PBB, BPHTB & Kode Etik: <strong class="text-emerald-800">A</strong></div>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-1.5 pt-2 border-t border-slate-100">
+                        <button onclick="openPhotoModal('cert-ctt-atpi.jpg', 'Certified Tax Technician (CTT) - Asosiasi Teknisi Perpajakan Indonesia (ATPI)')" class="px-2.5 py-1.5 rounded-lg bg-navy-50 hover:bg-navy-100 text-navy-900 text-[10px] font-bold border border-slate-200 flex items-center gap-1"><i class="fa-solid fa-certificate text-gold-600"></i> Sertifikat CTT ATPI</button>
+                        <button onclick="openPhotoModal('cert-ctt-atpi-unit.jpg', 'Daftar Unit Kompetensi CTT - ATPI')" class="px-2.5 py-1.5 rounded-lg bg-navy-50 hover:bg-navy-100 text-navy-900 text-[10px] font-bold border border-slate-200 flex items-center gap-1"><i class="fa-solid fa-list-check text-gold-600"></i> Daftar Unit ATPI</button>
+                        <button onclick="openPhotoModal('cert-brevet-feb-uns.jpg', 'Sertifikat Brevet Pajak A & B - FEB Universitas Sebelas Maret')" class="px-2.5 py-1.5 rounded-lg bg-navy-50 hover:bg-navy-100 text-navy-900 text-[10px] font-bold border border-slate-200 flex items-center gap-1"><i class="fa-solid fa-certificate text-gold-600"></i> Sertifikat Brevet FEB UNS</button>
+                        <button onclick="openPhotoModal('cert-brevet-transkrip.jpg', 'Transkrip Nilai Brevet Pajak A & B - FEB Universitas Sebelas Maret')" class="px-2.5 py-1.5 rounded-lg bg-navy-50 hover:bg-navy-100 text-navy-900 text-[10px] font-bold border border-slate-200 flex items-center gap-1"><i class="fa-solid fa-file-lines text-gold-600"></i> Transkrip Nilai</button>
+                    </div>
+                `;
+            } else if (type === 'bnsp') {
+                title.textContent = 'Sertifikasi Manajemen Risiko Perbankan BNSP';
+                body.innerHTML = `
+                    <div class="p-3 bg-navy-50 rounded-xl border border-navy-100 space-y-1.5">
+                        <p class="font-bold text-navy-900">Nomor Sertifikat BNSP: <span class="font-mono text-gold-600">70209 2413 5 00000034 2025</span></p>
+                        <p class="font-bold text-navy-900">Nomor Registrasi: <span class="font-mono text-gold-600">KEU 1847 00000028 2025</span></p>
+                        <p class="text-slate-600">Penerbit: Badan Nasional Sertifikasi Profesi (BNSP) & LSP UNS</p>
+                        <p class="text-slate-600">Tanggal Terbit: 31 Oktober 2025 (Masa Berlaku 3 Tahun)</p>
+                    </div>
+                    <div class="space-y-1.5">
+                        <p class="font-bold text-navy-900">Daftar 5 Unit Kompetensi Teruji:</p>
+                        <ul class="list-disc list-inside text-slate-600 space-y-1">
+                            <li><strong class="text-navy-900">K.64MRP00.001.1:</strong> Menganalisis Risk Coverage Berdasarkan Visi, Misi & Strategi Bisnis Bank.</li>
+                            <li><strong class="text-navy-900">K.64MRP00.002.1:</strong> Menyusun Risk Appetite Framework.</li>
+                            <li><strong class="text-navy-900">K.64MRP00.003.1:</strong> Menyusun Struktur, Tanggung Jawab & Risk Governance Perbankan.</li>
+                            <li><strong class="text-navy-900">K.64MRP00.004.1:</strong> Mengembangkan Budaya Risiko (Risk Culture).</li>
+                            <li><strong class="text-navy-900">K.64MRP00.005.1:</strong> Menganalisis Kebutuhan SIMR & Infrastruktur Manajemen Risiko Bank.</li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-wrap gap-1.5 pt-2 border-t border-slate-100">
+                        <button onclick="openPhotoModal('cert-bnsp-risk-1.jpg', 'Sertifikat Kompetensi BNSP - Manajemen Risiko Perbankan')" class="px-2.5 py-1.5 rounded-lg bg-navy-50 hover:bg-navy-100 text-navy-900 text-[10px] font-bold border border-slate-200 flex items-center gap-1"><i class="fa-solid fa-certificate text-gold-600"></i> Sertifikat Asli</button>
+                        <button onclick="openPhotoModal('cert-bnsp-risk-2.jpg', 'Daftar Unit Kompetensi BNSP - Manajemen Risiko Perbankan')" class="px-2.5 py-1.5 rounded-lg bg-navy-50 hover:bg-navy-100 text-navy-900 text-[10px] font-bold border border-slate-200 flex items-center gap-1"><i class="fa-solid fa-list-check text-gold-600"></i> Daftar Unit Kompetensi</button>
+                    </div>
+                `;
+            } else if (type === 'iso_systems') {
+                title.textContent = 'Sertifikasi ISO 9001, 14001 & 45001 - Winsor Quality Management';
+                body.innerHTML = `
+                    <div class="p-3 bg-navy-50 rounded-xl border border-navy-100 space-y-1.5">
+                        <p class="text-slate-600">Penerbit: CV Winsor Quality Management - Training & Consulting Services</p>
+                        <p class="text-slate-600">Tanggal Webinar: 15 Maret 2025</p>
+                    </div>
+                    <div class="grid grid-cols-1 gap-2">
+                        <button onclick="openPhotoModal('cert-iso9001-qms.jpg', 'Certificate of Participation - ISO 9001:2015 (QMS) Webinar')" class="p-2.5 rounded-lg bg-slate-50 hover:bg-navy-50 border border-slate-200 text-left flex items-center justify-between">
+                            <span class="text-xs font-bold text-navy-900">ISO 9001:2015 (QMS) <span class="font-normal text-slate-500">- Cert #004/WQ/ISO/III/2025</span></span>
+                            <i class="fa-solid fa-chevron-right text-[10px] text-slate-400"></i>
+                        </button>
+                        <button onclick="openPhotoModal('cert-iso14001-ems.jpg', 'Certificate of Participation - ISO 14001:2015 (EMS) Webinar')" class="p-2.5 rounded-lg bg-slate-50 hover:bg-navy-50 border border-slate-200 text-left flex items-center justify-between">
+                            <span class="text-xs font-bold text-navy-900">ISO 14001:2015 (EMS) <span class="font-normal text-slate-500">- Cert #013/WQ/ISO/III/2025</span></span>
+                            <i class="fa-solid fa-chevron-right text-[10px] text-slate-400"></i>
+                        </button>
+                        <button onclick="openPhotoModal('cert-iso45001-ohsms.jpg', 'Certificate of Participation - ISO 45001:2018 (OHSMS) Webinar')" class="p-2.5 rounded-lg bg-slate-50 hover:bg-navy-50 border border-slate-200 text-left flex items-center justify-between">
+                            <span class="text-xs font-bold text-navy-900">ISO 45001:2018 (OHSMS) <span class="font-normal text-slate-500">- Cert #039/WQ/ISO/III/2025</span></span>
+                            <i class="fa-solid fa-chevron-right text-[10px] text-slate-400"></i>
+                        </button>
+                    </div>
+                `;
+            } else if (type === 'psm_award') {
+                title.textContent = 'Penghargaan Best Project Feasibility (PSM Award 2025)';
+                body.innerHTML = `
+                    <div class="p-3 bg-navy-50 rounded-xl border border-navy-100 space-y-1.5">
+                        <p class="font-bold text-navy-900">Kategori Penghargaan: <span class="text-gold-600">Best Project Feasibility Group (INNERA)</span></p>
+                        <p class="text-slate-600">Penyelenggara: Program Studi S1 Manajemen FEB Universitas Sebelas Maret</p>
+                        <p class="text-slate-600">Acara: Praktik Simulasi Manajerial Award (PSM Award 2025)</p>
+                    </div>
+                    <div class="p-2 bg-slate-900 rounded-xl border border-gold-500/30 text-center">
+                        <p class="text-xs text-gold-300 font-bold mb-2"><i class="fa-solid fa-users me-1"></i> Dokumentasi Tim INNERA - PSM Award 2025</p>
+                        <div class="p-2 bg-slate-800 rounded-lg text-slate-300 text-xs italic">
+                            "Berhasil menyusun studi kelayakan proyek bisnis komprehensif yang dinilai terbaik secara kelayakan finansial, pasar, dan risiko operasional."
+                        </div>
+                    </div>
+                `;
+            } else if (type === 'ppk_ormawa') {
+                title.textContent = 'Hibah PPK Ormawa Kemendikbudristek & Publikasi Media';
+                body.innerHTML = `
+                    <div class="p-3 bg-navy-50 rounded-xl border border-navy-100 space-y-1.5">
+                        <p class="font-bold text-navy-900">Nomor SK Hibah Resmi: <span class="font-mono text-gold-600">7421/E2/DT.01.01/2024</span></p>
+                        <p class="text-slate-600">Penerbit: Direktorat Pembelajaran & Kemahasiswaan Ditjen Diktiristek Kemendikbudristek RI</p>
+                        <p class="text-slate-600">Peran: Tim Pelaksana & Social Media Designer BEM FEB UNS</p>
+                    </div>
+                    <div class="p-3 bg-blue-50 rounded-xl border border-blue-200 text-xs space-y-1.5">
+                        <p class="font-bold text-blue-950 flex items-center gap-1.5">
+                            <i class="fa-solid fa-newspaper text-blue-600"></i> Publikasi Media Nasional (Solopos News - 31 Agustus 2024)
+                        </p>
+                        <p class="text-blue-900 font-semibold">Judul Berita: "Tim PPK Ormawa BEM FEB UNS Luncurkan Lembaga Ndalem Waru di Karanganyar"</p>
+                        <p class="text-slate-600 leading-relaxed">Merancang sistem branding, konten publikasi media, serta pelaksanaan peluncuran lembaga kemasyarakatan di Desa Waru, Kebakkramat, Karanganyar.</p>
+                    </div>
+                    <div class="pt-2 border-t border-slate-100">
+                        <button onclick="openPhotoModal('cert-ppk-ormawa.jpg', 'Sertifikat Resmi Hibah PPK Ormawa - Direktorat Jenderal Diktiristek Kemendikbudristek RI')" class="px-2.5 py-1.5 rounded-lg bg-navy-50 hover:bg-navy-100 text-navy-900 text-[10px] font-bold border border-slate-200 flex items-center gap-1"><i class="fa-solid fa-certificate text-gold-600"></i> Lihat Sertifikat Resmi</button>
+                    </div>
+                `;
+            } else if (type === 'fmei') {
+                title.textContent = 'Delegasi Kongres I FMEI 2023 - Universitas Gadjah Mada';
+                body.innerHTML = `
+                    <div class="p-3 bg-navy-50 rounded-xl border border-navy-100 space-y-1.5">
+                        <p class="font-bold text-navy-900">Nomor Sertifikat Delegasi: <span class="font-mono text-gold-600">086/SRT/FORUMEKSTERNAL/FMEI/V/2023</span></p>
+                        <p class="text-slate-600">Penyelenggara: BEM FEB UGM & Presidium Nasional Forum Mahasiswa Ekonomi Indonesia</p>
+                        <p class="text-slate-600">Lokasi & Waktu: Universitas Gadjah Mada, Yogyakarta (14 Mei 2023)</p>
+                    </div>
+                    <div class="p-3 bg-amber-50 rounded-xl border border-amber-200 text-xs space-y-1">
+                        <p class="font-bold text-amber-950"><i class="fa-solid fa-building-columns me-1 text-gold-600"></i>Peran Delegasi Institusional:</p>
+                        <p class="text-slate-700 leading-relaxed">Mewakili UNS dalam sidang diplomasi isu ekonomi nasional dan perumusan rekomendasi kebijakan makroekonomi pemuda antar-fakultas ekonomi se-Indonesia.</p>
+                    </div>
+                    <div class="pt-2 border-t border-slate-100">
+                        <button onclick="openPhotoModal('cert-fmei-delegasi.jpg', 'Sertifikat Delegasi Kongres I FMEI 2023 - BEM FEB UGM')" class="px-2.5 py-1.5 rounded-lg bg-navy-50 hover:bg-navy-100 text-navy-900 text-[10px] font-bold border border-slate-200 flex items-center gap-1"><i class="fa-solid fa-certificate text-gold-600"></i> Lihat Sertifikat Asli</button>
+                    </div>
+                `;
+            }
+
+            modal.classList.remove('hidden');
+        }
+
+        function closeCertModal() {
+            document.getElementById('cert-modal').classList.add('hidden');
+        }
+
+        document.getElementById('photo-modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closePhotoModal();
+            }
+        });
+
+        document.getElementById('cert-modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeCertModal();
+            }
+        });
+
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('form-name').value;
+            const subject = document.getElementById('form-subject').value;
+            showToast(`Terima kasih ${name}! Undangan "${subject}" telah berhasil diproses.`);
+            this.reset();
+        });
+    </script>
+</body>
+</html>
